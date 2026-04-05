@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>J23 Logística Inteligente - Belém</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>J23 - Roteirizador de Frotas Profissional</h1>
+        <p>Reduza custos com combustível e tempo de planejamento</p>
+    </header>
+
+    <main>
+        <!-- Formulário com campos obrigatórios conforme solicitado -->
+        <form id="logistica-form" onsubmit="gerarRotaOtimizada(event)">
+            <div class="input-section">
+                <label for="origem">Ponto de Origem (Obrigatório):</label>
+                <input type="text" id="origem" required placeholder="Ex: Garagem Central - Belém">
+            </div>
+
+            <div class="input-section">
+                <label for="paradas">Paradas Intermediárias (Até 300 endereços):</label>
+                <textarea id="paradas" placeholder="Cole os endereços de entrega (um por linha)"></textarea>
+            </div>
+
+            <div class="input-section">
+                <label for="destino">Ponto de Destino Final (Obrigatório):</label>
+                <input type="text" id="destino" required placeholder="Ex: Porto de Belém">
+            </div>
+
+            <div class="options-grid">
+                <div class="option">
+                    <label>Objetivo da Rota:</label>
+                    <select id="objetivo">
+                        <option value="distancia">Reduzir Distâncias (Minimizar KM)</option>
+                        <option value="tempo">Terminar mais rápido (Tempo)</option>
+                    </select>
+                </div>
+                <div class="option checkbox-group">
+                    <input type="checkbox" id="todos-veiculos">
+                    <label for="todos-veiculos">Utilizar todos os veículos</label>
+                </div>
+            </div>
+
+            <button type="submit" id="btn-submit">Gerar Rota Otimizada em Segundos</button>
+        </form>
+
+        <!-- Área de Resultados (Escondida até o processamento) -->
+        <section id="painel-resultados" class="hidden">
+            <div class="alerta-sucesso">Rota calculada com precisão logística!</div>
+            
+            <div class="metricas-entrega">
+                <div class="card">
+                    <small>Previsão de Chegada (ETA) [2, 5]</small>
+                    <strong id="eta-valor">-</strong>
+                </div>
+                <div class="card">
+                    <small>Status da Frota [6]</small>
+                    <strong id="status-frota">Monitorando...</strong>
+                </div>
+            </div>
+
+            <div class="mapa-simulado">
+                <h3>Monitoramento: Região Metropolitana de Belém</h3>
+                <!-- Imagem simulando o mapa da capital do Pará -->
+                <img src="https://placehold.jp/40/004a99/ffffff/800x400.png?text=SIMULAÇÃO+MAPA:+BELÉM+(PA)%0A%0ARota+Ativa:+Origem+→+Paradas+→+Destino" alt="Mapa de Belém">
+                <div class="link-cliente">
+                    <button onclick="alert('Link enviado ao cliente!')">Gerar Link de Rastreio para Cliente [5]</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <footer align="center">&copy;Prof. Paulo Aires - Todos os direitos reservados</footer>
+</body>
+</html>

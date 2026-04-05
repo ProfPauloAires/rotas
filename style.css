@@ -1,0 +1,17 @@
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f4f8; color: #333; margin: 0; padding: 20px; }
+header { background: #004a99; color: white; padding: 20px; text-align: center; border-radius: 8px; margin-bottom: 25px; }
+main { max-width: 850px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.input-section { margin-bottom: 15px; }
+label { display: block; font-weight: 600; margin-bottom: 8px; color: #004a99; }
+input[type="text"], textarea, select { width: 100%; padding: 12px; border: 1px solid #ced4da; border-radius: 6px; box-sizing: border-box; }
+textarea { height: 100px; resize: vertical; }
+.options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; align-items: center; }
+.checkbox-group { display: flex; align-items: center; gap: 10px; }
+#btn-submit { background: #28a745; color: white; border: none; padding: 18px; width: 100%; font-size: 17px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: 0.2s; }
+#btn-submit:hover { background: #218838; }
+.hidden { display: none; }
+.metricas-entrega { display: flex; gap: 20px; margin: 20px 0; }
+.card { flex: 1; background: #e9ecef; padding: 15px; border-radius: 8px; text-align: center; }
+.mapa-simulado { position: relative; border: 2px solid #004a99; border-radius: 8px; overflow: hidden; margin-top: 25px; }
+.mapa-simulado img { width: 100%; display: block; }
+.link-cliente { padding: 15px; background: #f8f9fa; text-align: center; }
